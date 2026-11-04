@@ -1,7 +1,7 @@
 #' @importFrom caret createDataPartition
 #' @importFrom stats median model.matrix sd setNames
 #' @export
-
+library(caret)
 prepare_data <- function(data,
                          target = names(data)[ncol(data)],
                          scale_type = "standard",
