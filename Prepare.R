@@ -1,7 +1,15 @@
 #' @importFrom caret createDataPartition
 #' @importFrom stats median model.matrix sd setNames
 #' @export
+#' 
 library(caret)
+library(class)
+library(nnet)
+library(rpart)
+library(e1071)
+library(randomForest)
+library(glmnet)
+
 prepare_data <- function(data,
                          target = names(data)[ncol(data)],
                          scale_type = "standard",
